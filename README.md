@@ -89,6 +89,7 @@ You can deploy this project using [Render](https://render.com/).
 ## 🔭 Future Features <a name="future-features"></a>
 
 - [ ] **[integration with user inerface]**
+- [ ] - [ ] Implement functionality to store and retrieve Person and Student objects from a database.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
