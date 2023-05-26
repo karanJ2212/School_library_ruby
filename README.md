@@ -34,7 +34,9 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **[It Stores library data]**
+- - [x] Add decorator class and his method like the trim and capitalize👌
+ - [x] Add Student class and his method💯
+ - [x] Add Teachers class and his method👌
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
