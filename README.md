@@ -24,7 +24,7 @@
 
 # 📖 School_library_Ruby <a name="about-project"></a>
 
-**School_library_Ruby** - Ruby-OOP-School-Library Imagine that you are the librarian of OOP University, and you need a tool to record what books are in the library and who borrows them
+**School_library_Ruby** -Imagine that you are the librarian of OOP University, and you need a tool to record what books are in the library and who borrows them
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
@@ -34,7 +34,7 @@
 
 ### Key Features <a name="key-features"></a>
 
-- - [x] Add decorator class and his method like the trim and capitalize👌
+-  [x] Add decorator class and his method like the trim and capitalize👌
  - [x] Add Student class and his method💯
  - [x] Add Teachers class and his method👌
 
@@ -89,7 +89,7 @@ You can deploy this project using [Render](https://render.com/).
 ## 🔭 Future Features <a name="future-features"></a>
 
 - [ ] **[integration with user inerface]**
-- [ ] - [ ] Implement functionality to store and retrieve Person and Student objects from a database.
+- [ ] Implement functionality to store and retrieve Person and Student objects from a database.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
