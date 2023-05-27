@@ -9,7 +9,11 @@ class Rental
     @book = book
     @person = person
 
-    book.rentals << self
-    person.rentals << self
+    # book.rentals << self
+    # person.rentals << self
+    # person.rentals << self
+    # frm lucas
+    @person.rentals << self
+    @book.rentals << self
   end
 end

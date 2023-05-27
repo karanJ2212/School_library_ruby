@@ -1,112 +1,121 @@
-require_relative 'app'
+require './app'
 
-def main
-  app = App.new
+class Main
+  MENU_OPTIONS = {
+    '1' => :handle_list_books,
+    '2' => :handle_list_people,
+    '3' => :handle_create_person,
+    '4' => :handle_create_book,
+    '5' => :handle_create_rental,
+    '6' => :handle_list_rentals,
+    '7' => :handle_exit
+  }.freeze
 
-  loop do
-    display_menu
-
-    choice = gets.chomp.to_i
-
-    handle_choice(choice, app)
-
-    break if choice == 7
+  def initialize
+    @app = App.new
+    @menu_handler = MenuHandler.new(@app)
   end
 
-  puts 'Goodbye!'
-end
+  def run
+    display_welcome_message
+    process_menu_options
+    display_exit_message
+  end
 
-def display_menu
-  puts 'Welcome to the Rental App!'
-  puts 'Please choose an option:'
-  puts '1. List all books'
-  puts '2. List all people'
-  puts '3. Create a person'
-  puts '4. Create a book'
-  puts '5. Create a rental'
-  puts '6. List rentals for a person'
-  puts '7. Quit'
-end
+  private
 
-def handle_choice(choice, app)
-  options = {
-    1 => :list_all_books,
-    2 => :list_all_people,
-    3 => :create_person,
-    4 => :create_book,
-    5 => :create_rental,
-    6 => :list_rentals_for_person,
-    7 => :quit
-  }
+  def process_menu_options
+    loop do
+      display_menu
+      option = gets.chomp
 
-  if options.key?(choice)
-    send(options[choice], app)
-  else
-    puts 'Invalid choice. Please try again.'
+      if MENU_OPTIONS.key?(option)
+        send(MENU_OPTIONS[option])
+      else
+        puts 'That is not a valid number'
+      end
+
+      break if option == '7' # Exit the loop if '7' is entered
+    end
+  end
+
+  def handle_list_books
+    @menu_handler.list_books
+  end
+
+  def handle_list_people
+    @menu_handler.list_people
+  end
+
+  def handle_create_person
+    @menu_handler.create_person
+  end
+
+  def handle_create_book
+    @menu_handler.create_book
+  end
+
+  def handle_create_rental
+    @menu_handler.create_rental
+  end
+
+  def handle_list_rentals
+    @menu_handler.list_rentals
+  end
+
+  def handle_exit
+    # No need to perform any action, just exit the loop
+  end
+
+  def display_welcome_message
+    puts 'Welcome to the School Library App!'
+  end
+
+  def display_menu
+    puts 'Please choose an option by entering a number:'
+    puts '1 - List all books'
+    puts '2 - List all people'
+    puts '3 - Create a person'
+    puts '4 - Create a book'
+    puts '5 - Create a rental'
+    puts '6 - List all rentals for a given person id'
+    puts '7 - Exit'
+  end
+
+  def display_exit_message
+    puts 'Thank you!'
   end
 end
 
-def list_all_books(app)
-  app.list_all_books
-end
+class MenuHandler
+  def initialize(app)
+    @app = app
+  end
 
-def list_all_people(app)
-  app.list_all_people
-end
+  def list_books
+    @app.list_books
+  end
 
-def create_person(app)
-  puts "Enter the person's name:"
-  name = gets.chomp
+  def list_people
+    @app.list_people
+  end
 
-  puts "Enter the person's age:"
-  age = gets.chomp.to_i
+  def create_person
+    @app.create_person
+  end
 
-  puts 'Do you want to create a student(1) or a teacher(2)? [input the number]'
-  type = gets.chomp
+  def create_book
+    @app.create_book
+  end
 
-  if type == '2'
-    app.create_person(name, age, 'teacher')
-  elsif type == '1'
-    puts "Enter the student's classroom:"
-    classroom = gets.chomp
-    app.create_person(name, age, 'student', classroom)
-  else
-    puts 'Invalid person type!'
+  def create_rental
+    @app.create_rental
+  end
+
+  def list_rentals
+    @app.list_rentals
   end
 end
 
-def create_book(app)
-  puts "Enter the book's title:"
-  title = gets.chomp
-
-  puts "Enter the book's author:"
-  author = gets.chomp
-
-  app.create_book(title, author)
-end
-
-def create_rental(app)
-  puts "Enter the person's ID:"
-  person_id = gets.chomp.to_i
-
-  puts "Enter the book's title:"
-  book_title = gets.chomp
-
-  puts 'Enter the rental date (YYYY-MM-DD):'
-  rental_date = gets.chomp
-
-  app.create_rental(person_id, book_title, rental_date)
-end
-
-def list_rentals_for_person(app)
-  puts "Enter the person's ID:"
-  person_id = gets.chomp.to_i
-
-  app.list_rentals_for_person(person_id)
-end
-
-def quit(_app)
-  # No action needed
-end
-# Invoke the entry point
-main
+main = Main.new
+main.run
