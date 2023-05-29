@@ -17,7 +17,6 @@ class Interface
     @app = app
   end
 
-
   def start
     puts 'Welcome to School Library App!'
     loop do
@@ -52,7 +51,6 @@ class Interface
     puts 'Q - Quit'
   end
 
-
   def handle_option(option)
     action = OPTION_ACTIONS[option]
     if action
@@ -64,36 +62,29 @@ class Interface
     end
   end
 
-
   def handle_list_books
     @app.list_books
   end
-
 
   def handle_list_people
     @app.list_people
   end
 
-
   def handle_create_person
     @app.create_person
   end
-
 
   def handle_create_book
     @app.create_book
   end
 
-
   def handle_create_rental
     @app.create_rental
   end
 
-
   def handle_list_rentals
     @app.list_rentals
   end
-
 
   def quit
     # No action required for quitting
