@@ -7,7 +7,6 @@ class Main
     @app = App.new
   end
 
-
   def run
     Interface.new(@app).start
   end
