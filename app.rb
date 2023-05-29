@@ -4,6 +4,7 @@ require_relative 'book'
 require_relative 'rental'
 require_relative 'teacher'
 require_relative 'student'
+require_relative 'input'
 
 class App
   attr_accessor :people_list, :book_list, :rental_list
@@ -12,6 +13,7 @@ class App
     @people_list = []
     @book_list = []
     @rental_list = []
+    @input = Input.new
   end
 
   def list_books
@@ -35,8 +37,7 @@ class App
   end
 
   def create_person
-    puts 'Do you want to create a student (1) or a teacher (2)? [Input the number 1 or 2]: '
-    input_result = gets.chomp.to_i
+    input_result = @input.person_input
 
     case input_result
     when 1
@@ -49,14 +50,9 @@ class App
   end
 
   def create_student
-    print 'Age: '
-    age = gets.chomp
-
-    print 'Name: '
-    name = gets.chomp
-
-    print 'Has Parent permission? [Y/N]: '
-    permission = gets.chomp
+    age = @input.age_input
+    name = @input.name_input
+    permission = @input.parent_permission_input
 
     student = Student.new(age, name, parent_permission: permission)
     @people_list << student
@@ -64,14 +60,9 @@ class App
   end
 
   def create_teacher
-    print 'Age: '
-    age = gets.chomp
-
-    print 'Name: '
-    name = gets.chomp
-
-    print 'Specialization: '
-    specialization = gets.chomp
+    age = @input.age_input
+    name = @input.name_input
+    specialization = @input.specialization_input
 
     teacher = Teacher.new(age, name, specialization: specialization)
     @people_list << teacher
@@ -79,11 +70,8 @@ class App
   end
 
   def create_book
-    print 'Title: '
-    title = gets.chomp
-
-    print 'Author: '
-    author = gets.chomp
+    title = @input.title_input
+    author = @input.author_input
 
     book = Book.new(title, author)
     @book_list << book
@@ -96,13 +84,12 @@ class App
     return puts 'No person records found' if @people_list.empty?
 
     display_books
-    book_index = gets.chomp.to_i
+    book_index = @input.book_index_input(@book_list.size)
 
     display_people
-    person_index = gets.chomp.to_i
+    person_index = @input.person_index_input(@people_list.size)
 
-    print 'Date: '
-    date = gets.chomp
+    date = @input.date_input
 
     rental = Rental.new(date, @book_list[book_index], @people_list[person_index])
     @rental_list << rental
@@ -116,8 +103,7 @@ class App
       return
     end
 
-    print 'ID of person: '
-    id = gets.chomp.to_i
+    id = @input.person_id_input
 
     rentals = @rental_list.filter { |rental| rental.person.id == id }
 
