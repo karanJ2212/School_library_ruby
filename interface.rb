@@ -1,6 +1,5 @@
 require './app'
 
-
 class Interface
   OPTION_ACTIONS = {
     '1' => :handle_list_books,
@@ -12,7 +11,6 @@ class Interface
     'q' => :quit
   }.freeze
 
-
   def initialize(app)
     @app = app
   end
@@ -23,22 +21,17 @@ class Interface
       display_options
       option = gets.chomp
 
-
       handle_option(option.downcase)
-
 
       puts ' '
       # input = gets.chomp
       break if option.downcase == 'q'
     end
 
-
     puts 'Thank you! You are always welcome.'
   end
 
-
   private
-
 
   def display_options
     puts 'Please choose an option by entering a number:'
