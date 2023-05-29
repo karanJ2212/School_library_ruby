@@ -1,126 +1,142 @@
-<a name="readme-top"></a>
+<a id="readme-top"></a>
+
+
+<div align="center">
+
+  <h1><b>School Libray</b></h1>
+
+</div>
 
 <!-- TABLE OF CONTENTS -->
 
 # 📗 Table of Contents
 
+
 - [📖 About the Project](#about-project)
-  - [🛠 Built With](#built-with)
-    - [Tech Stack](#tech-stack)
-    - [Key Features](#key-features)
-- [💻 Getting Started](#getting-started)
-  - [Setup](#setup)
-  - [Prerequisites](#prerequisites)
-  - [Deployment](#triangular_flag_on_post-deployment)
-- [👥 Authors](#authors)
-- [🔭 Future Features](#future-features)
-- [🤝 Contributing](#contributing)
-- [⭐️ Show your support](#support)
-- [🙏 Acknowledgements](#acknowledgements)
-- [❓ FAQ](#faq)
-- [📝 License](#license)
+  - [🛠 Built With ](#built-with)
+    - [Tech Stack ](#tech-stack)
+    - [Key Features ](#key-features)
+  - [🚀 Live Demo ](#live-demo)
+  - [💻 Getting Started ](#getting-started)
+    - [Prerequisites](#prerequisites)
+    - [Setup](#setup)
+  - [👥 Authors ](#authors)
+  - [🔭 Future Features ](#future-features)
+  - [🤝 Contributing ](#contributing)
+  - [⭐️ Show your support ](#️show-your-support)
+  - [🙏 Acknowledgments ](#acknowledgments)
+  - [📝 License ](#license)
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 School_library_Ruby <a name="about-project"></a>
+# 📖 School Library <a id="about-project"></a>
 
-**School_library_Ruby** -Imagine that you are the librarian of OOP University, and you need a tool to record what books are in the library and who borrows them
-## 🛠 Built With <a name="built-with"></a>
+This project helps to understand the basics of Ruby programming language. It is a collection of exercises and projects that will help you to understand the basics of OOPS in Ruby programming language.
 
-### Tech Stack <a name="tech-stack"></a>
+## 🛠 Built With <a id="built-with"></a>
 
-- Ruby
-<!-- Features -->
+### Tech Stack <a id="tech-stack"></a>
 
-### Key Features <a name="key-features"></a>
-
--  [x] Add decorator class and his method like the trim and capitalize👌
- - [x] Add Student class and his method💯
- - [x] Add Teachers class and his method👌
+  <details>
+    <summary>Server</summary>
+    <ul>
+      <li><a href="#">Ruby</a></li>
+    </ul>
+  </details>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- Features -->
+
+### Key Features <a id="key-features"></a>
+
+- **Add Classes**
+- **Decorate a class**
+- **Set up associations**
+- **basic UI**
+- **refactor to meet SOLID principles**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LIVE DEMO -->
+
 
 <!-- GETTING STARTED -->
 
-## 💻 Getting Started <a name="getting-started"></a>
-
-To get a local copy up and running, follow these steps.
-
-### Prerequisites <a name="prerequisites"></a>
+## 💻 Getting Started <a id="getting-started"></a>
+### Prerequisites
 
 In order to run this project you need:
 
-```sh
-A Computer
-Code editor (VSCode,Atom etc...)
-A browser (Chrome,Mozilla,Safari etc...)
-Version Control System (Git and Github)
-NodeJS (https://nodejs.org/en/)
-```
+- Git and GitHub
+- A code editor
+- Ruby
 
-### Setup <a name="setup"></a>
+### Setup
 
-Clone this repository to your desired folder:
+To get a local copy up and running, follow these steps:
 
-```sh
-  cd my-folder
-  git clone https://github.com/karanJ2212/School_library_Ruby.git
-```
+- Create a local directory where you can clone the project
+  - `https://github.com/karanJ2212/School_library_Ruby.git`
+### Usage
 
-### Deployment <a name="#triangular_flag_on_post-deployment"></a>
-
-You can deploy this project using [Render](https://render.com/).
+To run the project, execute the following command in command line:
+> ruby main.rb
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- AUTHORS -->
-
-## 👥 Authors <a name="authors"></a>
+## 👥 Authors <a id="authors"></a>
 
 👤 **Karan Jain**
 
 - GitHub: [@karanjain2212](https://github.com/karanjain2212)
 - LinkedIn: [@karanjain2212](https://linkedin.com/in/karanjain2212)
 
+👤 **Lucas Erkana**
+
+- GitHub: [@Lucash2022](https://github.com/Lucash2022)
+- Twitter: [@Lucas_David_22](https://twitter.com/@Lucas_David_22)
+- LinkedIn: [Lucas Erkana](https://www.linkedin.com/in/lucas-erkana/)
+
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
 
-## 🔭 Future Features <a name="future-features"></a>
+## 🔭 Future Features <a id="future-features"></a>
 
-- [ ] **[integration with user inerface]**
-- [ ] Implement functionality to store and retrieve Person and Student objects from a database.
+- [ ] **Add unit tests for all the methods in all the classes**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- CONTRIBUTING -->
 
-## 🤝 Contributing <a name="contributing"></a>
+## 🤝 Contributing <a id="contributing"></a>
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/karanJ2212/School_library_Ruby/issues).
+Feel free to check the [issues page](../../issues/).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- SUPPORT -->
 
-## ⭐️ Show your support <a name="support"></a>
+## ⭐️ Show your support <a id="support"></a>
 
-If you like this project please consider starring it.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- ACKNOWLEDGEMENTS -->
-
-## 🙏 Acknowledgments <a name="acknowledgements"></a>
-
-I would like to thank [Microverse](https://www.microverse.org/) for giving me this chance to work on this project.
+If you like this project kindly leave a ⭐
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## 📝 License <a name="license"></a>
+## 🙏 Acknowledgments <a id="acknowledgements"></a>
 
-This project is [MIT](https://github.com/karanJ2212/School_library_ruby/blob/class/LICENSE.md) licensed.
+I would like to thank Microverse for the great resources shared.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LICENSE -->
+
+## 📝 License <a id="license"></a>
+
+This project is [MIT](./LICENSE) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
