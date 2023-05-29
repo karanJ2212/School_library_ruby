@@ -24,7 +24,6 @@ class Interface
       handle_option(option.downcase)
 
       puts ' '
-      # input = gets.chomp
       break if option.downcase == 'q'
     end
 
