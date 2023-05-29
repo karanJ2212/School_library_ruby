@@ -85,7 +85,7 @@ To run the project, execute the following command in command line:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## 👥 Author <a id="authors"></a>
+## 👥 Authors <a id="authors"></a>
 
 👤 **Karan Jain**
 
