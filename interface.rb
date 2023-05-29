@@ -48,9 +48,9 @@ class Interface
     if action
       send(action)
     else
-      puts '*************************************'
-      puts 'That is not a valid number or option'
-      puts '*************************************'
+      puts '*************************************' unless option.downcase == 'q'
+      puts 'That is not a valid number or option' unless option.downcase == 'q'
+      puts '*************************************' unless option.downcase == 'q'
     end
   end
 
