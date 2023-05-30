@@ -1,6 +1,5 @@
 require_relative 'preserve_data'
 
-
 class Loader
   def initialize(app)
     @handle_data = HandleData.new
@@ -11,7 +10,6 @@ class Loader
     books = @handle_data.read_data('books.json') if File.exist?('books.json')
     return unless books
 
-
     books.each do |book|
       @app.create_book_from_file(book['title'], book['author'])
     end
@@ -20,7 +18,6 @@ class Loader
   def load_persons
     persons = @handle_data.read_data('person.json') if File.exist?('person.json')
     return unless persons
-
 
     persons.each do |person|
       if person['type'] == 'Student'
@@ -34,7 +31,6 @@ class Loader
   def load_rentals
     rentals = @handle_data.read_data('rentals.json') if File.exist?('rentals.json')
     return unless rentals
-
 
     rentals.each do |rental|
       @app.create_rental_from_file(rental['date'], rental['person_idx'], rental['book_idx'])

@@ -1,6 +1,5 @@
 require 'json'
 
-
 class HandleData
   def read_data(filename)
     File.empty?(filename) ? [] : JSON.parse(File.read(filename))

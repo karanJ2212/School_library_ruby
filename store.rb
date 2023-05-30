@@ -1,6 +1,5 @@
 require_relative 'preserve_data'
 
-
 class Store
   def initialize
     @handle_data = HandleData.new
