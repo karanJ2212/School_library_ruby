@@ -7,7 +7,6 @@ class Loader
     @app = app
   end
 
-
   def load_books
     books = @handle_data.read_data('books.json') if File.exist?('books.json')
     return unless books
@@ -17,7 +16,6 @@ class Loader
       @app.create_book_from_file(book['title'], book['author'])
     end
   end
-
 
   def load_persons
     persons = @handle_data.read_data('person.json') if File.exist?('person.json')
@@ -33,7 +31,6 @@ class Loader
     end
   end
 
-
   def load_rentals
     rentals = @handle_data.read_data('rentals.json') if File.exist?('rentals.json')
     return unless rentals
@@ -43,7 +40,6 @@ class Loader
       @app.create_rental_from_file(rental['date'], rental['person_idx'], rental['book_idx'])
     end
   end
-
 
   def load_all
     load_books

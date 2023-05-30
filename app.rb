@@ -16,7 +16,6 @@ class App
     @rentals = []
   end
 
-
   def list_books
     if @book.empty?
       puts 'There is no book avilable'
@@ -26,7 +25,6 @@ class App
       puts "Title: #{book.title}, Author: #{book.author}"
     end
   end
-
 
   def list_people
     if @people.empty?
@@ -39,7 +37,6 @@ class App
       puts "#{type} Name: #{person.name}, ID: #{person.id}, Age: #{person.age}"
     end
   end
-
 
   def create_person
     print 'Do you want to create a student (1) or a teacher (2)? [input the number]: '
@@ -56,7 +53,6 @@ class App
     end
   end
 
-
   def create_student
     print 'Age: '
     age = gets.chomp.to_i
@@ -69,11 +65,9 @@ class App
     puts 'Student created successfuly!'
   end
 
-
   def create_student_from_file(name, age, permisson)
     @people << Student.new(age, name, parent_permission: permisson)
   end
-
 
   def create_teacher
     print 'Age: '
@@ -87,11 +81,9 @@ class App
     puts 'Teacher created successfully!'
   end
 
-
   def create_teacher_from_file(name, age, specialization)
     @people << Teacher.new(name, age, specialization)
   end
-
 
   def create_book
     print 'Title: '
@@ -103,11 +95,9 @@ class App
     puts 'Book created successfully!'
   end
 
-
   def create_book_from_file(title, author)
     @book << Book.new(title, author)
   end
-
 
   def rental_selection
     puts 'Select a book from the following list by number (not ID)'
@@ -127,7 +117,6 @@ class App
     puts 'Rental created successfully'
   end
 
-
   def create_rental
     if @book.empty?
       puts 'No book record found'
@@ -138,11 +127,9 @@ class App
     end
   end
 
-
   def create_rental_from_file(date, person_index, book_index)
     @rentals << Rental.new(date, @people[person_index], @book[book_index])
   end
-
 
   def list_rentals
     print 'ID of person: '
