@@ -7,7 +7,6 @@ require './rental'
 require './store'
 require_relative 'preserve_data'
 
-
 class App
   def initialize
     @store = Store.new
@@ -41,7 +40,6 @@ class App
   def create_person
     print 'Do you want to create a student (1) or a teacher (2)? [input the number]: '
     user_input = gets.chomp.to_i
-
 
     case user_input
     when 1
@@ -134,11 +132,7 @@ class App
   def list_rentals
     print 'ID of person: '
     id = gets.chomp.to_i
-
-
     rentals = @rentals.filter { |rental| rental.person.id == id }
-
-
     puts 'Rentals:'
     rentals.each do |rental|
       puts "Date: #{rental.date}, Book '#{rental.book.title}' by #{rental.book.author}"

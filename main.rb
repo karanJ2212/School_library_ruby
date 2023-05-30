@@ -2,7 +2,6 @@ require './app'
 require './user_selection'
 require './loader'
 
-
 class Main
   def initialize
     @app = App.new
@@ -10,9 +9,7 @@ class Main
     @loader.load_all
   end
 
-
   puts 'Welcome to School Library App!'
-
 
   def run
     while @user_selection != 7
@@ -26,15 +23,11 @@ class Main
       puts '6 - List all rentals for a given person id'
       puts '7 - Exit'
 
-
       @user_selection = gets.chomp.to_i
-
-
       selection(@user_selection, @app)
     end
   end
 end
-
 
 main = Main.new
 main.run
