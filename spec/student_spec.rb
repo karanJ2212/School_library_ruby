@@ -1,4 +1,4 @@
-require_relative '../classes/student'
+require_relative '../student'
 
 describe Student do
   before :each do
